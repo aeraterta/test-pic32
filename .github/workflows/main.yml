@@ -16,7 +16,7 @@ jobs:
           uses: actions/checkout@v1
 
         - name: Build project with MPLAB X IDE
-          uses: aeraterta/mplab-xc32-action@v1.0.0
+          uses: aeraterta/mplab-xc32-action@v1.0
           with:
             project: pic32mz_w1_curiosity.X
             packs: "PIC32MZ-W_DFP=1.6.220"
