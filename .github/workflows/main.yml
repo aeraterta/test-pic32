@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+      name: Build the project
+      runs-on: ubuntu-latest
+      steps:
+        - name: Download the source code
+          uses: actions/checkout@v1
+
+        - name: Build project with MPLAB X IDE
+          uses: aeraterta/mplab-xc32-action@v1.0.0
+          with:
+            project: pic32mz_w1_curiosity.X
+            packs: "PIC32MZ-W_DFP=1.6.220"
+            configuration: default
