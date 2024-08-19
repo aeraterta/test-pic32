@@ -15,7 +15,7 @@ jobs:
         - name: Download the source code
           uses: actions/checkout@v1
 
-        - name: MPLABX v6.20 and XC32 v4.45 Compiler Action 
+        - name: Build project with MPLAB X IDE
           uses: aeraterta/mplab-xc32-action@1.0
           with:
             project: pic32mz_w1_curiosity.X
