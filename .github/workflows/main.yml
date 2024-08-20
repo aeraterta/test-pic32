@@ -22,14 +22,6 @@ jobs:
           packs: "PIC32MZ-DA_DFP=1.5.231"
           configuration: default
 
-      - name: Convert ELF files to HEX
-        run: |
-          mkdir -p dist/default/production/hex
-          for elf in dist/default/production/*.elf; do
-            hex="${elf%.elf}.hex"
-            /opt/microchip/xc32/v4.45/bin/xc32-bin2hex "$elf" -o "$hex"
-          done
-
       - name: Upload ELF and HEX files as artifacts
         uses: actions/upload-artifact@v3
         with:
