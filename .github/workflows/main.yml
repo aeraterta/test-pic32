@@ -18,6 +18,6 @@ jobs:
         - name: Build project with MPLAB X IDE
           uses: aeraterta/mplab-xc32-action@1.0
           with:
-            project: pic32mz_w1_curiosity.X
-            packs: "PIC32MZ-W_DFP=1.6.220"
+            project: lsm.X
+            packs: "PIC32MZ-DA_DFP=1.5.231"
             configuration: default

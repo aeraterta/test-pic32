@@ -1,0 +1,53 @@
+# MPLAB X IDE files
+*.suo
+*.ncb
+*.user
+*.userossc
+*.userprefs
+*.pgd
+*.plg
+*.proj
+*.vscode/
+
+# Build output
+build/
+dist/
+*.d
+*.o
+*.a
+*.lib
+*.lo
+*.la
+*.suo
+*.ncb
+*.pdb
+*.idb
+*.iobj
+*.ipdb
+*.ipch
+*.obj
+*.exp
+*.pdb
+*.dmp
+*.stackdump
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.swn
+*.bak
+*.old
+
+# Miscellaneous
+*.gch
+*.pch
+*.stackdump
+*.tmp
+*.~*
+
+# Ignore MPLAB X IDE specific files
+.mplabx/
+.mplabx/.settings/
+.mplabx/.metadata/
