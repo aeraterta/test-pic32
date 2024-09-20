@@ -15,10 +15,13 @@ jobs:
       - name: Download the source code
         uses: actions/checkout@v1
 
+      - name: Set environment variable
+        run: echo "PROJECT_NAME=lsm.X" >> $GITHUB_ENV
+
       - name: Build project with MPLAB X IDE
         uses: aeraterta/mplab-xc32-action@1.0
         with:
-          project: lsm.X
+          project: ${{ env.PROJECT_NAME }}
           packs: "PIC32MZ-DA_DFP=1.5.231"
           configuration: default
 
@@ -26,4 +29,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: lsm-artifacts
-          path: .
+          path: ${{ env.PROJECT_NAME }}/dist/default/production/
